@@ -23,7 +23,6 @@ model User {
   updatedAt       DateTime     @updatedAt
   isEmailVerified Boolean      @default(false)
   tokens          Token[]
-  products        Product[]
   orders          Order[]
 }
 
