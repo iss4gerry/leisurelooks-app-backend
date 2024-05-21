@@ -26,4 +26,4 @@ Delete Product by ID : `DELETE /product/:productId`
 ## Contributors
 
 - Gerry Desrian as Back-End
-  -Gilang Nur Rizki as Front-End
+- Gilang Nur Rizki as Front-End
