@@ -1,6 +1,5 @@
 # Leisure Looks Backend Using Express, Prisma, MySQL
 
-
 ## Install Depedencies
 
     npm install
@@ -16,15 +15,15 @@
 User Register : `POST /auth/register`
 User Login : `POST /auth/login`
 
-
 ### Product Route
 
-Create Product                : `POST /product`
-Get All Products                  : `GET /product`
-Get Product by ID             : `GET /product/:productId`
-Update Product by ID          : `PATCH /product/:productId`
-Delete Product by ID          : `DELETE /product/:productId`
+Create Product : `POST /product`
+Get All Products : `GET /product`
+Get Product by ID : `GET /product/:productId`
+Update Product by ID : `PATCH /product/:productId`
+Delete Product by ID : `DELETE /product/:productId`
 
+## Contributors
 
-
-
+- Gerry Desrian as Back-End
+  -Gilang Nur Rizki as Front-End
