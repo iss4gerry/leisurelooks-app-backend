@@ -1,39 +1,26 @@
 const httpStatus = require('http-status')
 const authService = require('../services/auth-service')
+const catchAsync = require('../utils/catchAsync')
 
-const register = async (req, res) => {
-    try {
-        const result = await authService.register(req.body)
+const register = catchAsync(async (req, res) => {
+    const result = await authService.register(req.body)
 
-        res.status(httpStatus.OK).send({
-            status: httpStatus.OK,
-            message:  'Success',
-            data: result
-        })
-    } catch (error) {
-        res.status(error.statusCode).send({
-            status: error.statusCode,
-            message:  error.message
-        })
-    }
-}
+    res.status(httpStatus.OK).send({
+        status: httpStatus.OK,
+        message:  'Success',
+        data: result
+    })
+})
 
-const login = async (req, res) => {
-    try {
-        const result = await authService.login(req.body.email, req.body.password)
+const login = catchAsync(async (req, res) => {
+    const result = await authService.login(req.body.email, req.body.password)
 
-        res.status(httpStatus.OK).send({
-            status: httpStatus.OK,
-            message:  'Success',
-            data: result
-        })
-    } catch (error) {
-        res.status(error.statusCode).send({
-            status: error.statusCode,
-            message:  error.message
-        })
-    }
-}
+    res.status(httpStatus.OK).send({
+        status: httpStatus.OK,
+        message:  'Success',
+        data: result
+    })
+})
 
 module.exports = { 
     register, 
