@@ -1,4 +1,4 @@
-# Leisure Looks Backend Usinng Express, Prisma, MySQL
+# Leisure Looks Backend Using Express, Prisma, MySQL
 
 
 ## Install Depedencies
