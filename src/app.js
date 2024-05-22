@@ -11,7 +11,7 @@ app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
     res.send('Hello World')
-})
+}) 
 
 app.use(router)
 app.use(errorHandler)
