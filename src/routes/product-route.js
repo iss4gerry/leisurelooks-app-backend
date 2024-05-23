@@ -3,8 +3,15 @@ const router = express.Router()
 const auth  = require('../middlewares/auth')
 const productController = require('../controllers/product-controller')
 
-router.route('/').post(productController.addProduct).get(auth.verifyToken, productController.getAllProduct)
+router
+    .route('/')
+    .post(auth.verifyToken, productController.addProduct)
+    .get(productController.getAllProduct)
 
-router.route('/:productId').patch(productController.updateProduct).get(productController.getProductById).delete(productController.deleteProduct)
+router
+    .route('/:productId')
+    .patch(auth.verifyToken, productController.updateProduct)
+    .get(productController.getProductById)
+    .delete(auth.verifyToken, productController.deleteProduct)
 
 module.exports = router
